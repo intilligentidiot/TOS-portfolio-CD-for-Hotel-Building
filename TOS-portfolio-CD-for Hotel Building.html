@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Documentation - Hotel Holiday Inn | Tesla Outsourcing Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tesla: {
+                            red: '#BE1E2D',
+                            dark: '#1A1A1A',
+                            light: '#F9FAFB',
+                            gray: '#333333',
+                            'red-hover': '#9e1926'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Oswald', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'technical-grid': "linear-gradient(to right, #f0f0f0 1px, transparent 1px), linear-gradient(to bottom, #f0f0f0 1px, transparent 1px)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .technical-bg {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+        }
+        
+        .image-card {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .blueprint-accent {
+            position: relative;
+        }
+        
+        .blueprint-accent::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #BE1E2D;
+        }
+
+        /* Modal Styles */
+        .modal {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-tesla-gray antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="https://www.teslaoutsourcingservices.com/images/tos-logo.svg" alt="Tesla Outsourcing Services" class="h-10 md:h-12 w-auto">
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center font-medium text-sm tracking-wide">
+                    <a href="https://www.teslaoutsourcingservices.com/portfolio.php" class="text-tesla-red font-bold">Portfolio</a>
+                    <a href="#contact" class="bg-tesla-red text-white px-6 py-2.5 rounded hover:bg-tesla-red-hover transition shadow-sm hover:shadow-md">
+                        Get a Quote
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-tesla-red focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-tesla-dark text-white overflow-hidden">
+        <!-- Abstract Technical Background -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute inset-0 bg-[url('https://www.teslaoutsourcingservices.com/images/portfolio/hotel-holiday-inn-usa-hotel-construction-documentation-enlarged-plan.webp')] bg-cover bg-center grayscale"></div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-tesla-dark via-tesla-dark/95 to-tesla-dark/80"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-start justify-between gap-12">
+                <div class="max-w-3xl space-y-6">
+                    <div class="flex items-center gap-3 text-tesla-red font-bold tracking-widest uppercase text-xs">
+                        <span class="w-8 h-0.5 bg-tesla-red"></span>
+                        <span>Portfolio Case Study</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl font-heading font-bold leading-tight">
+                        Construction Documentation<br>
+                        <span class="text-gray-400">Hotel Building</span>
+                    </h1>
+                    
+                    <div class="h-1 w-20 bg-tesla-red my-6"></div>
+
+                    <p class="text-xl text-gray-300 font-light max-w-2xl">
+                        Comprehensive architectural construction documentation set for the<a href="https://www.teslaoutsourcingservices.com/portfolio/construction-documentation-set-of-a-hotel-building.php" class="hover:text-tesla-red"> Hotel Holiday In</a>, delivering precise enlarged plans, elevations, and sections for seamless project execution.
+                    </p>
+                </div>
+
+                <!-- Project Snapshot Card -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-lg w-full md:w-80 shrink-0 shadow-2xl">
+                    <h3 class="text-lg font-heading font-semibold mb-4 border-b border-white/10 pb-2">Project Snapshot</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li>
+                            <p class="text-gray-400 text-xs uppercase mb-1">Project Name</p>
+                            <p class="font-medium flex items-center gap-2"><i class="fas fa-building text-tesla-red"></i> Hotel Holiday Inn</p>
+                        </li>
+                        <li>
+                            <p class="text-gray-400 text-xs uppercase mb-1">Location</p>
+                            <p class="font-medium flex items-center gap-2"><i class="fas fa-map-marker-alt text-tesla-red"></i> United States</p>
+                        </li>
+                        <li>
+                            <p class="text-gray-400 text-xs uppercase mb-1">Building Type</p>
+                            <p class="font-medium flex items-center gap-2"><i class="fas fa-hotel text-tesla-red"></i> Hospitality / Hotel</p>
+                        </li>
+                         <li>
+                            <p class="text-gray-400 text-xs uppercase mb-1">Deliverable</p>
+                            <p class="font-medium flex items-center gap-2"><i class="fas fa-file-invoice text-tesla-red"></i> Construction Docs</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="py-20 technical-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-tesla-dark mb-4">Technical Deliverables</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore the detailed documentation set produced by our team, ensuring architectural precision and code compliance.</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Item 1: Enlarged Plan -->
+                <div class="group bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 image-card cursor-pointer" onclick="openModal(this)">
+                    <div class="relative h-64 overflow-hidden bg-gray-100 border-b border-gray-200">
+                        <img src="https://www.teslaoutsourcingservices.com/images/portfolio/hotel-holiday-inn-usa-hotel-construction-documentation-enlarged-plan.webp" 
+                             alt="Hotel Holiday Inn Enlarged Plan" 
+                             class="w-full h-full object-cover object-top transition duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-tesla-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="text-white border border-white px-4 py-2 uppercase text-xs tracking-wider hover:bg-white hover:text-tesla-dark transition">View Detail</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-tesla-dark text-lg mb-1 group-hover:text-tesla-red transition">Enlarged Plan</h3>
+                        <p class="text-gray-500 text-sm">Detailed floor layout and dimensions.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: RCP -->
+                <div class="group bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 image-card cursor-pointer" onclick="openModal(this)">
+                    <div class="relative h-64 overflow-hidden bg-gray-100 border-b border-gray-200">
+                        <img src="https://www.teslaoutsourcingservices.com/images/portfolio/hotel-holiday-inn-usa-hotel-construction-documentation-enlarged-plan-rcp.webp" 
+                             alt="Hotel Holiday Inn Enlarged Plan RCP" 
+                             class="w-full h-full object-cover object-top transition duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-tesla-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="text-white border border-white px-4 py-2 uppercase text-xs tracking-wider hover:bg-white hover:text-tesla-dark transition">View Detail</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-tesla-dark text-lg mb-1 group-hover:text-tesla-red transition">Enlarged Plan RCP</h3>
+                        <p class="text-gray-500 text-sm">Reflected Ceiling Plan specifications.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Elevation 1 -->
+                <div class="group bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 image-card cursor-pointer" onclick="openModal(this)">
+                    <div class="relative h-64 overflow-hidden bg-gray-100 border-b border-gray-200">
+                        <img src="https://www.teslaoutsourcingservices.com/images/portfolio/hotel-holiday-inn-usa-hotel-construction-documentation-exterior-elevations-1.webp" 
+                             alt="Exterior Elevation 1" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-tesla-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="text-white border border-white px-4 py-2 uppercase text-xs tracking-wider hover:bg-white hover:text-tesla-dark transition">View Detail</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-tesla-dark text-lg mb-1 group-hover:text-tesla-red transition">Exterior Elevation 1</h3>
+                        <p class="text-gray-500 text-sm">Front façade architectural details.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4: Elevation 2 -->
+                <div class="group bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 image-card cursor-pointer" onclick="openModal(this)">
+                    <div class="relative h-64 overflow-hidden bg-gray-100 border-b border-gray-200">
+                        <img src="https://www.teslaoutsourcingservices.com/images/portfolio/hotel-holiday-inn-usa-hotel-construction-documentation-exterior-elevations-2.webp" 
+                             alt="Exterior Elevation 2" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-tesla-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="text-white border border-white px-4 py-2 uppercase text-xs tracking-wider hover:bg-white hover:text-tesla-dark transition">View Detail</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-tesla-dark text-lg mb-1 group-hover:text-tesla-red transition">Exterior Elevation 2</h3>
+                        <p class="text-gray-500 text-sm">Side façade material specifications.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5: Elevation 3 -->
+                <div class="group bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 image-card cursor-pointer" onclick="openModal(this)">
+                    <div class="relative h-64 overflow-hidden bg-gray-100 border-b border-gray-200">
+                        <img src="https://www.teslaoutsourcingservices.com/images/portfolio/hotel-holiday-inn-usa-hotel-construction-documentation-exterior-elevations-3.webp" 
+                             alt="Exterior Elevation 3" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-tesla-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="text-white border border-white px-4 py-2 uppercase text-xs tracking-wider hover:bg-white hover:text-tesla-dark transition">View Detail</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-tesla-dark text-lg mb-1 group-hover:text-tesla-red transition">Exterior Elevation 3</h3>
+                        <p class="text-gray-500 text-sm">Rear profile and structural alignments.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6: Section 1 -->
+                <div class="group bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 image-card cursor-pointer" onclick="openModal(this)">
+                    <div class="relative h-64 overflow-hidden bg-gray-100 border-b border-gray-200">
+                        <img src="https://www.teslaoutsourcingservices.com/images/portfolio/hotel-holiday-inn-usa-hotel-construction-documentation-section-1.webp" 
+                             alt="Section 1" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-tesla-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="text-white border border-white px-4 py-2 uppercase text-xs tracking-wider hover:bg-white hover:text-tesla-dark transition">View Detail</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-tesla-dark text-lg mb-1 group-hover:text-tesla-red transition">Building Section 1</h3>
+                        <p class="text-gray-500 text-sm">Vertical cut showing floor heights and plenum.</p>
+                    </div>
+                </div>
+
+                 <!-- Item 7: Section 2 -->
+                 <div class="group bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 image-card cursor-pointer" onclick="openModal(this)">
+                    <div class="relative h-64 overflow-hidden bg-gray-100 border-b border-gray-200">
+                        <img src="https://www.teslaoutsourcingservices.com/images/portfolio/hotel-holiday-inn-usa-hotel-construction-documentation-section-2.webp" 
+                             alt="Section 2" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-tesla-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="text-white border border-white px-4 py-2 uppercase text-xs tracking-wider hover:bg-white hover:text-tesla-dark transition">View Detail</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-tesla-dark text-lg mb-1 group-hover:text-tesla-red transition">Building Section 2</h3>
+                        <p class="text-gray-500 text-sm">Detailed cross-section of stairwell and lobby.</p>
+                    </div>
+                </div>
+
+                 <!-- Item 8: Demolition Plan -->
+                 <div class="group bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 image-card cursor-pointer" onclick="openModal(this)">
+                    <div class="relative h-64 overflow-hidden bg-gray-100 border-b border-gray-200">
+                        <img src="https://www.teslaoutsourcingservices.com/images/portfolio/hotel-holiday-inn-usa-hotel-construction-documentation-demolition-plan.webp" 
+                             alt="Demolition Plan" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-tesla-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="text-white border border-white px-4 py-2 uppercase text-xs tracking-wider hover:bg-white hover:text-tesla-dark transition">View Detail</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-tesla-dark text-lg mb-1 group-hover:text-tesla-red transition">Demolition Plan</h3>
+                        <p class="text-gray-500 text-sm">Existing structures to be removed.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Call to Action / Stats -->
+    <section class="bg-tesla-red text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
+                <div class="p-4">
+                    <i class="fas fa-briefcase text-4xl mb-4 text-white/80"></i>
+                    <h4 class="text-3xl font-bold font-heading">17+</h4>
+                    <p class="text-sm uppercase tracking-wide mt-2 opacity-90">Years Experience</p>
+                </div>
+                <div class="p-4">
+                    <i class="fas fa-project-diagram text-4xl mb-4 text-white/80"></i>
+                    <h4 class="text-3xl font-bold font-heading">5000+</h4>
+                    <p class="text-sm uppercase tracking-wide mt-2 opacity-90">Successful Projects</p>
+                </div>
+                <div class="p-4">
+                    <i class="fas fa-globe-americas text-4xl mb-4 text-white/80"></i>
+                    <h4 class="text-3xl font-bold font-heading">25+</h4>
+                    <p class="text-sm uppercase tracking-wide mt-2 opacity-90">Countries Served</p>
+                </div>
+                <div class="p-4">
+                    <i class="fas fa-smile text-4xl mb-4 text-white/80"></i>
+                    <h4 class="text-3xl font-bold font-heading">300+</h4>
+                    <p class="text-sm uppercase tracking-wide mt-2 opacity-90">Happy Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-tesla-dark text-gray-400 py-16 border-t-4 border-tesla-red">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Contact Form Replica -->
+                <div>
+                    <h3 class="text-2xl text-white font-heading font-bold mb-6 flex items-center gap-2">
+                        <span class="w-2 h-8 bg-tesla-red block"></span> Contact Us
+                    </h3>
+                    <form onsubmit="event.preventDefault(); alert('This is a demo form.');" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" class="bg-[#2a2a2a] border border-gray-700 text-white px-4 py-3 rounded focus:outline-none focus:border-tesla-red w-full">
+                            <input type="email" placeholder="E-mail" class="bg-[#2a2a2a] border border-gray-700 text-white px-4 py-3 rounded focus:outline-none focus:border-tesla-red w-full">
+                        </div>
+                        <input type="tel" placeholder="Phone No" class="bg-[#2a2a2a] border border-gray-700 text-white px-4 py-3 rounded focus:outline-none focus:border-tesla-red w-full">
+                        <select class="bg-[#2a2a2a] border border-gray-700 text-white px-4 py-3 rounded focus:outline-none focus:border-tesla-red w-full">
+                            <option>United States</option>
+                            <option>Canada</option>
+                            <option>Australia</option>
+                            <option>United Kingdom</option>
+                        </select>
+                        <textarea rows="4" placeholder="Message" class="bg-[#2a2a2a] border border-gray-700 text-white px-4 py-3 rounded focus:outline-none focus:border-tesla-red w-full"></textarea>
+                        <button class="bg-tesla-red text-white font-bold uppercase tracking-wide py-3 px-8 rounded hover:bg-tesla-red-hover transition w-full md:w-auto">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Direct Contact</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-4 group">
+                             <a href="https://www.linkedin.com/company/tesla-outsourcing-services/" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-tesla-red transition text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+                                
+                            </li>
+                            <li class="flex items-center gap-4 group">
+                               <a href="https://x.com/teslaoutsource" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-tesla-red transition text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                            </li>
+                            <li class="flex items-center gap-4 group">
+                               <a href="https://www.facebook.com/teslaoutsourcingservices/" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-tesla-red transition text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                            </li>
+                            <li class="flex items-center gap-4 group">
+                               <a href="https://www.instagram.com/teslaos/" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-tesla-red transition text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; Tesla Outsourcing Services LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 z-[100] modal bg-black/95 flex items-center justify-center p-4">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-tesla-red transition focus:outline-none" onclick="closeModal()">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="relative max-w-7xl w-full max-h-[90vh]">
+            <img id="modalImage" src="" alt="Full view" class="w-full h-full object-contain max-h-[85vh] rounded-sm">
+            <div class="mt-4 text-center">
+                <h3 id="modalTitle" class="text-white font-heading text-xl"></h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(element) {
+            const img = element.querySelector('img');
+            const title = element.querySelector('h3').innerText;
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalImg.src = img.src;
+            modalTitle.innerText = title;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
